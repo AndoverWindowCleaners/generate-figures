@@ -8,9 +8,12 @@ HEIGHT = 96
 
 xs, ys = [], []
 
+counts = {}
+x = 0
 for folder in os.listdir(labels_folder):
     if folder != '.DS_Store':
         for filename in os.listdir(f"{labels_folder}{folder}"):
+            x += 1
             max_imgs = 0
             x_best = []
             y_best = []
@@ -34,8 +37,12 @@ for folder in os.listdir(labels_folder):
                             y_best = y_temps.copy()
             xs += x_best
             ys += y_best
+            if max_imgs in counts:
+                counts[max_imgs] += 1
+            else:
+                counts[max_imgs] = 1
 
-print(len(xs))
+print(counts)
 
 plt.scatter(xs, ys, c='b')
 
