@@ -24,6 +24,7 @@ for video in os.listdir(videos_folder):
                 break
         frames.append(avg/num_frames/255)
 
+plt.style.use('seaborn-white')
 
 plt.hist(frames)
 plt.xlabel("Average Light Intensity")

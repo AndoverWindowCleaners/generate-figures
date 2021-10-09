@@ -43,7 +43,7 @@ for folder in os.listdir(labels_folder):
                 counts[max_imgs] = 1
 
 print(counts)
-
+plt.style.use('seaborn-white')
 plt.scatter(ws, hs, c='b')
 
 plt.tick_params(which='both', left=False, labelleft=False, bottom=False, labelbottom=False)

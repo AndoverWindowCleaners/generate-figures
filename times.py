@@ -15,6 +15,7 @@ for video in os.listdir(videos_folder):
         cap = cv2.VideoCapture(os.path.join(videos_folder,video))
         frames.append(int(cap.get(cv2.CAP_PROP_FRAME_COUNT)))
 
+plt.style.use('seaborn-white')
 plt.hist(frames)
 plt.xlabel("Frames in Video")
 plt.ylabel("Frequency")

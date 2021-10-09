@@ -43,7 +43,7 @@ for folder in os.listdir(labels_folder):
                 counts[max_imgs] = 1
 
 print(counts)
-
+plt.style.use('seaborn-white')
 plt.scatter(xs, ys, c='b')
 
 ax = plt.gca()
@@ -51,4 +51,4 @@ ax.axes.xaxis.set_visible(False)
 ax.axes.yaxis.set_visible(False)
 
 plt.title("Centers of Windows")
-plt.savefig('output.jpg')
+plt.savefig('locations.jpg')

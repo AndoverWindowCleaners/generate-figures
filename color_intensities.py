@@ -29,6 +29,8 @@ for video in os.listdir(videos_folder):
         greens.append(avg[1])
         reds.append(avg[2])
 
+plt.style.use('seaborn-white')
+
 fig, axs = plt.subplots(1, 3, sharey=True)
 
 axs[0].hist(reds, color='r')
