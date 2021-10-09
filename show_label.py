@@ -14,4 +14,4 @@ with open('labels/Folder 21 W/labels_folder-21-w_YOLO/0000.txt') as f:
 for xmin, ymin, xmax, ymax in windows:
     img = cv2.rectangle(img, (xmin, ymin), (xmax, ymax), (0, 255, 255), 1)
 
-cv2.imwrite('output.jpg', img)
+cv2.imwrite('output0.jpg', img)
